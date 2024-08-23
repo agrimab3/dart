@@ -1,4 +1,4 @@
 void main() {
-    String myname = "agrima";
-    print("My name: $myname");
+    String m_yname = "agrima";
+    print("My name: $m_yname");
 }
