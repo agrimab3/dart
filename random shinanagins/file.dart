@@ -1,7 +1,7 @@
 ///
 /// File Size Calculator
 /// 
-import 'dart:io';
+import dart:io;
 
 Future<void> main() async {
   final path = stdin.readLineSync()!;
