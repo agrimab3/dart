@@ -72,12 +72,20 @@ void main() {
 
 import 'dart:io';
 
-String calculateTotal(List<Map<String,dynamic>> stuList) {
-    // int scores = (mathInt ?? 0) +
-    //              (scienceInt ?? 0) +
-    //              (englishInt ?? 0) +
-    //              (historyInt ?? 0);
+String calculateTotal(List<Map<String,dynamic>> studentList) {
+    print(studentList);
+for (int i=0; i<studentList.length; i++) {
+    print(studentList[i]);
+    print(studentList.length);
+    print(studentList[i]['score'].length);
+    print(studentList[i]['score']);
+    print(studentList[i]['name']);
+    for (int j=0; j<studentList[i]['score'].length; j++) {
+            print(studentList[i]['score'][j]);
+            
+    }
 
+}
     double avg = 70 / 4;
     String grade = calculateGrade(avg);
     return grade;
@@ -119,7 +127,7 @@ void main() {
         for(int i=0; i<studentLengthInt ; i++) {
             print('What is your name?');
             String? name = stdin.readLineSync();
-            print(name);
+            // print(name);
             print('What is your Math score?');
             String? math = stdin.readLineSync();
             int? mathInt = int.tryParse(math!);
@@ -147,9 +155,8 @@ void main() {
                 [mathInt ?? 0, scienceInt ?? 0, englishInt ?? 0, historyInt ?? 0]);
             stuList.add(studentDetails);
         }
-        print(stuList);
-        // calculateTotal(stuList);
-        // return totalcal;
+        // print(stuList);
+        calculateTotal(stuList);
     } else {
         print('Enter valid count');
 
